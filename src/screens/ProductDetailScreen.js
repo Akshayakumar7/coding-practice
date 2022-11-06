@@ -28,7 +28,6 @@ import ProductCard from '../component/productCard';
 import {ImageSlider} from 'react-native-image-slider-banner';
 
 const ProducDetailScreen = ({navigation}) => {
-
   const onPressSeeDiscriptionButton = () => {
     navigation.navigate('DescriptionScreen');
   };
@@ -65,7 +64,9 @@ const ProducDetailScreen = ({navigation}) => {
           <View style={style.flexView}>
             <RatingStarCard />
             <View style={style.minimumWidth} />
-            <Text style={style.reviewText}>{SEE_REVIEW_TEXT}</Text>
+            <TouchableOpacity onPress={() => onPressAddReviewButton()}>
+              <Text style={style.reviewText}>{SEE_REVIEW_TEXT}</Text>
+            </TouchableOpacity>
           </View>
           <View style={style.extraHeight} />
           <Text style={style.priceText}>{PRICE_TEXT}</Text>
@@ -75,7 +76,9 @@ const ProducDetailScreen = ({navigation}) => {
           <TouchableOpacity onPress={() => onPressSeeDiscriptionButton()}>
             <View style={style.buttonBorderView}>
               <View style={style.alignBittonItems}>
-                <Text style={style.descriptionText}>{SEE_DESCRIPTION_TEXT}</Text>
+                <Text style={style.descriptionText}>
+                  {SEE_DESCRIPTION_TEXT}
+                </Text>
                 <Image source={ARROW_ICON} style={style.arrowIconStyle} />
               </View>
             </View>
@@ -83,14 +86,14 @@ const ProducDetailScreen = ({navigation}) => {
           <View style={style.extraHeight} />
           <View style={style.smallHeight} />
 
-          <TouchableOpacity onPress={() => onPressAddReviewButton()}>
+          {/* <TouchableOpacity onPress={() => onPressAddReviewButton()}>
             <View style={style.subView}>
               <View style={style.alignBittonItems}>
                 <Text style={style.descriptionText}>{ADD_REVIEW_TEXT}</Text>
                 <Image source={ARROW_ICON} style={style.arrowIconStyle} />
               </View>
             </View>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
           <View style={style.extraHeight} />
           <View style={style.alignBittonItems}>
             <Text style={style.categoriesText}>{RELEATED_PRODUCT_TEXT}</Text>

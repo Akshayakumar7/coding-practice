@@ -27,10 +27,12 @@ const style = StyleSheet.create({
     borderRadius: hp(2.5),
     alignItems: 'center',
     justifyContent: 'center',
+    // alignContent:'center'
   },
   imageStyle: {
     width: '70%',
     height: '70%',
+    marginTop:hp(1.5)
   },
 });
 export default CategoryCard;

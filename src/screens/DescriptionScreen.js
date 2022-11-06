@@ -1,14 +1,16 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import {hp, wp} from '../methods/commonMethods';
 import BACK_HANDLET from '../../asset/images/arrow-left.png';
-import { DESCRIPTION_TEXT } from '../constants/constantData';
+import {DESCRIPTION_TEXT} from '../constants/constantData';
 
-const DescriptionScreen = () => {
+const DescriptionScreen = ({navigation}) => {
   return (
     <View style={style.mainView}>
       <View style={style.flexView}>
-        <Image source={BACK_HANDLET} style={style.arrowStyle} />
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <Image source={BACK_HANDLET} style={style.arrowStyle} />
+        </TouchableOpacity>
         <Text style={style.textStyle}>{DESCRIPTION_TEXT}</Text>
       </View>
       <View>
@@ -49,11 +51,11 @@ const style = StyleSheet.create({
   paragraphText: {
     fontSize: hp(2.2),
     lineHeight: hp(4.5),
-    color:'#00000080'
+    color: '#00000080',
   },
   mainView: {width: '90%', alignSelf: 'center'},
-  height:{
-    height:hp(1)
-  }
+  height: {
+    height: hp(1),
+  },
 });
 export default DescriptionScreen;

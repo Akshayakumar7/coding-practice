@@ -35,8 +35,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   imageStyle: {
-    width: '70%',
-    height: '70%',
+    width: wp(32),
+    height: hp(18),
+    marginTop:hp(2.5)
   },
   productText: {
     fontFamily: 'Roboto',

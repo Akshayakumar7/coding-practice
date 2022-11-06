@@ -35,6 +35,7 @@ import LIGHT_BLUE_ICON from '../../asset/images/lightblue.png';
 import PURPOLE_ICON from '../../asset/images/purpole.png';
 import GREEN_ICON from '../../asset/images/green.png';
 import YELLOW_ICON from '../../asset/images/yellow.png';
+import CROSS_ICON from '../../asset/images/close.png';
 
 const ProductScreen = ({navigation}) => {
   const [listView, setListView] = useState(true);
@@ -55,6 +56,11 @@ const ProductScreen = ({navigation}) => {
     setThirdCheckBox(!thirdCheckBox);
   };
 
+  const onPressFilterIcon = () => {
+    console.log("Modal state changed")
+    setModalVisible(!modalVisible);
+  };
+
   const renderProducts = item => {
     return (
       <View style={style.extraMarinRight}>
@@ -64,7 +70,7 @@ const ProductScreen = ({navigation}) => {
             price={item.price}
             productText={item.productname}
             customMainView={style.productCardWidth}
-            productStyle={style.productStyle}
+            // productStyle={style.productStyle}
           />
         </Pressable>
       </View>
@@ -82,7 +88,6 @@ const ProductScreen = ({navigation}) => {
             cardStyle={style.parallelCardStyle}
             itemSeperator={itemSeperator}
             productStyle={style.productStyle}
-           
           />
         </View>
       </Pressable>
@@ -117,7 +122,7 @@ const ProductScreen = ({navigation}) => {
           <Text style={style.productTextStyle}>{NEW_PRODUCT_TEXT}</Text>
           <View style={style.alignIcon}>
             <View style={style.filterImageMargin}>
-              <Pressable onPress={() => setModalVisible(!modalVisible)}>
+              <Pressable onPress={onPressFilterIcon}>
                 <Image source={FILTER_ICON} style={style.filterIconStyle} />
               </Pressable>
             </View>
@@ -167,10 +172,15 @@ const ProductScreen = ({navigation}) => {
           animationType="slide"
           transparent={true}
           visible={modalVisible}
-          onRequestClose={() => setModalVisible(!modalVisible)}>
+          onRequestClose={onPressFilterIcon}>
           <View style={style.centeredView}>
             <View style={style.modalView}>
-              <Text style={style.categoryText}>{SPECIAL_OFFER_TEXT}</Text>
+              <View style={style.crossIconFlexView}>
+                <Text style={style.categoryText}>{SPECIAL_OFFER_TEXT}</Text>
+                <Pressable onPress={onPressFilterIcon}>
+                  <Image source={CROSS_ICON} style={style.crossIconStyle} />
+                </Pressable>
+              </View>
               <View style={style.minimumHeight} />
               <View style={style.alignItems}>
                 <View style={style.flexView}>
@@ -380,10 +390,7 @@ const style = StyleSheet.create({
   productCardWidth: {
     width: wp(40),
   },
-  productStyle: {
-    height: '80%',
-    width: '100%',
-  },
+  productStyle: {height:hp(17),width:wp(30)},
   mainView: {
     backgroundColor: 'white',
   },
@@ -413,8 +420,17 @@ const style = StyleSheet.create({
     height: hp(13),
     width: wp(30),
   },
-  listViewItemSeperatorHeight:{
-    height:hp(5.5)
-  }
+  listViewItemSeperatorHeight: {
+    height: hp(5.5),
+  },
+  crossIconStyle: {
+    height: hp(2.9),
+    width: wp(5.3),
+  },
+  crossIconFlexView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
 });
 export default ProductScreen;

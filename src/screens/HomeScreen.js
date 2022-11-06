@@ -29,7 +29,8 @@ const HomeScreen = () => {
       <View style={style.extraMarinRight}>
         <CategoryCard
           image={item.categoryItem}
-          productStyle={style.productStyle}
+          productStyle={style.categoryProductStyle}
+          customCardStyle={style.cardStyle}
         />
       </View>
     );
@@ -79,7 +80,6 @@ const HomeScreen = () => {
             />
           </View>
           <View style={style.divideHeight} />
-          {/* <View style={style.divideHeight} /> */}
           <View style={style.flexView}>
             <Text style={style.categoriesText}>{NEW_PRODUCT_TEXT}</Text>
             <TouchableOpacity>
@@ -142,13 +142,13 @@ const style = StyleSheet.create({
     fontFamily: 'Roboto',
     fontWeight: 'bold',
     color: '#00000080',
-    fontSize: hp(2.4),
+    fontSize: hp(2.3),
   },
   selectAllText: {
     fontFamily: 'Roboto',
     fontWeight: 'bold',
     color: '#B620E0',
-    fontSize: hp(2.3),
+    fontSize: hp(2.2),
   },
   divideHeight: {
     height: hp(2),
@@ -170,6 +170,14 @@ const style = StyleSheet.create({
     borderRadius: hp(2),
     width: wp(92.4),
   },
-  productStyle: {height: '80%', width: '100%'},
+  productStyle: {height:hp(17),width:wp(30)},
+  categoryProductStyle:{
+    height:'65%',
+    width:'85%'
+  },
+  cardStyle:{
+    width:wp(35),
+    height:hp(14)
+  }
 });
 export default HomeScreen;

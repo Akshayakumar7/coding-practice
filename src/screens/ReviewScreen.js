@@ -11,7 +11,12 @@ import {
 import {hp, wp} from '../methods/commonMethods';
 import BACK_HANDLET from '../../asset/images/arrow-left.png';
 import StarCard from '../component/StarCard';
-import {AllReviewData, ALL_REVIEW_TEXT, FILTER_TEXT, reviewData} from '../constants/constantData';
+import {
+  AllReviewData,
+  ALL_REVIEW_TEXT,
+  FILTER_TEXT,
+  reviewData,
+} from '../constants/constantData';
 import ReviewCard from '../component/ReviewCard';
 import PLUS_ICON from '../../asset/images/plus.png';
 
@@ -37,7 +42,9 @@ const ReviewScreen = ({navigation}) => {
     <View style={style.mainView}>
       <View style={style.headerSTyle}>
         <View style={style.flexView}>
-          <Image source={BACK_HANDLET} style={style.arrowStyle} />
+          <TouchableOpacity onPress={()=>navigation.goBack()}>
+            <Image source={BACK_HANDLET} style={style.arrowStyle} />
+          </TouchableOpacity>
           <Text style={style.testStyle}>{ALL_REVIEW_TEXT}</Text>
         </View>
       </View>
@@ -63,7 +70,6 @@ const ReviewScreen = ({navigation}) => {
             renderItem={({item}) => _renderReviewData(item)}
             style={style.bottomMargin}
             showsVerticalScrollIndicator={false}
-          
           />
         </View>
         <View style={style.buttonStyle}>
@@ -118,7 +124,7 @@ const style = StyleSheet.create({
     width: wp(18),
     height: hp(9.5),
   },
-  bottomMargin:{marginBottom: hp(25)},
-  mainView:{flex: 1}
+  bottomMargin: {marginBottom: hp(25)},
+  mainView: {flex: 1},
 });
 export default ReviewScreen;
