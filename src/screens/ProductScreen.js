@@ -57,7 +57,7 @@ const ProductScreen = ({navigation}) => {
   };
 
   const onPressFilterIcon = () => {
-    console.log("Modal state changed")
+    console.log('Modal state changed');
     setModalVisible(!modalVisible);
   };
 
@@ -70,7 +70,6 @@ const ProductScreen = ({navigation}) => {
             price={item.price}
             productText={item.productname}
             customMainView={style.productCardWidth}
-            // productStyle={style.productStyle}
           />
         </Pressable>
       </View>
@@ -274,7 +273,7 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    width: '85%',
+    width: '90%',
     alignSelf: 'center',
   },
   filterIconStyle: {
@@ -306,7 +305,7 @@ const style = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  marginBottom: {width: '90%', marginBottom: hp(6), alignSelf: 'center'},
+  marginBottom: {width: '95%', marginBottom: hp(6), alignSelf: 'center'},
   listViewImage: {
     height: hp(3.9),
     width: wp(6.7),
@@ -388,9 +387,9 @@ const style = StyleSheet.create({
     width: '100%',
   },
   productCardWidth: {
-    width: wp(40),
+    width: wp(42),
   },
-  productStyle: {height:hp(17),width:wp(30)},
+  productStyle: {height: hp(17), width: wp(30)},
   mainView: {
     backgroundColor: 'white',
   },
