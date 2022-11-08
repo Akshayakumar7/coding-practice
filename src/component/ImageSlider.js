@@ -15,7 +15,7 @@ import BACK_HANDLER from '../../asset/images/arrow-left.png';
 const {width, height} = Dimensions.get('screen');
 
 const ImageSlider = props => {
-  const {needHeader} = props;
+  const {needHeader,customStyle} = props;
   const scrollX = React.useRef(new Animated.Value(0)).current;
   const renderProducts = item => {
     return (
@@ -53,7 +53,7 @@ const ImageSlider = props => {
     );
   };
   return (
-    <View style={style.greyCard}>
+    <View style={[style.greyCard,customStyle]}>
       <View>
         {needHeader && (
           <View style={style.flexView}>

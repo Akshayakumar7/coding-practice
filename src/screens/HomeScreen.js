@@ -14,7 +14,6 @@ import {
   categoryData,
   data,
   DISCOUNT_TEXT,
-  imageUrlArray,
   NEW_PRODUCT_TEXT,
   SELECT_ALL_TEXT,
   shoesData,
@@ -152,10 +151,22 @@ const style = StyleSheet.create({
   extraMarinRight: {
     marginRight: hp(2),
   },
-  mainView: {flex: 1, backgroundColor: '#0063C6'},
-  imageSlider: {height: hp(20), padding: hp(2)},
-  leftMargin: {marginLeft: wp(4)},
-  marginFlex: {flex: 1, marginLeft: wp(4)},
+  mainView: {
+    flex: 1,
+    backgroundColor: '#0063C6',
+  },
+  imageSlider: {
+    height: hp(20),
+    padding: hp(2),
+    marginTop: hp(-1),
+  },
+  leftMargin: {
+    marginLeft: wp(4),
+  },
+  marginFlex: {
+    flex: 1,
+    marginLeft: wp(4),
+  },
   arrowStyle: {
     height: hp(10),
     width: wp(10),
@@ -166,7 +177,10 @@ const style = StyleSheet.create({
     borderRadius: hp(2),
     width: wp(92.4),
   },
-  productStyle: {height: hp(17), width: wp(30)},
+  productStyle: {
+    height: hp(17),
+    width: wp(30),
+  },
   categoryProductStyle: {
     height: '65%',
     width: '85%',
