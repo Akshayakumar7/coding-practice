@@ -42,7 +42,7 @@ const ReviewScreen = ({navigation}) => {
     <View style={style.mainView}>
       <View style={style.headerSTyle}>
         <View style={style.flexView}>
-          <TouchableOpacity onPress={()=>navigation.goBack()}>
+          <TouchableOpacity onPress={() => navigation.goBack()}>
             <Image source={BACK_HANDLET} style={style.arrowStyle} />
           </TouchableOpacity>
           <Text style={style.testStyle}>{ALL_REVIEW_TEXT}</Text>
@@ -62,8 +62,7 @@ const ReviewScreen = ({navigation}) => {
             renderItem={({item}) => _renderStarCard(item)}
           />
         </View>
-        <View style={style.height} />
-        <View style={style.height} />
+        <View style={style.extraHeight} />
         <View>
           <FlatList
             data={AllReviewData}
@@ -100,13 +99,15 @@ const style = StyleSheet.create({
   },
   flexView: {flexDirection: 'row', alignItems: 'center'},
   contentMainView: {
-    width: '90%',
+    width: '88%',
     alignSelf: 'center',
+    marginLeft: wp(1),
   },
   filterTextStyle: {
     fontSize: hp(2.4),
     color: '#a6a6a6',
     fontWeight: 'bold',
+    marginRight: wp(1),
   },
   height: {
     height: hp(1),
@@ -126,5 +127,8 @@ const style = StyleSheet.create({
   },
   bottomMargin: {marginBottom: hp(25)},
   mainView: {flex: 1},
+  extraHeight:{
+    height:hp(3)
+  }
 });
 export default ReviewScreen;

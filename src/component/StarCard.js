@@ -9,11 +9,11 @@ const StarCard = props => {
     <View>
       <View style={style.CardView}>
         <View style={style.flexView}>
-          {needStarIcon ? (
+          {needStarIcon && (
             <View>
               <Image source={STAR_ICON} style={[style.starImageSTyle]} />
             </View>
-          ) : null}
+          )}
           <Text style={style.textStyle}>{valueText}</Text>
         </View>
       </View>
@@ -32,15 +32,15 @@ const style = StyleSheet.create({
     backgroundColor: 'white',
     borderColor: 'white',
     borderRadius: hp(1),
-    width: wp(17.5),
-    height:hp(5.5)
+    width: wp(17),
+    height: hp(5.2),
   },
-  starImageSTyle: {height: hp(3), width: wp(4),marginRight:wp(2)},
+  starImageSTyle: {height: hp(3), width: wp(4), marginRight: wp(2)},
   textStyle: {
     textAlign: 'center',
     fontWeight: 'bold',
     fontSize: hp(2.1),
-    color:'#00000080'
+    color: '#00000080',
   },
 });
 export default StarCard;

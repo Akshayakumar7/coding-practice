@@ -1,14 +1,16 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image, TextInput} from 'react-native';
+import {StyleSheet, Text, View, Image, TextInput, TouchableOpacity} from 'react-native';
 import BACK_HANDLER from '../../asset/images/arrow-left.png';
 import BROWN_SEARCH_BAR from '../../asset/images/brownsearch.png'
 import {hp, wp} from '../methods/commonMethods';
 
-const SearchBar2 = () => {
+const SearchBar2 = ({navigation}) => {
   return (
     <View>
       <View style={style.fleView}>
+        <TouchableOpacity>
         <Image source={BACK_HANDLER} style={style.arrowStyle} />
+        </TouchableOpacity>
         <View style={style.searchBorder}>
           <View style={style.alignSearchbar}>
             <TextInput />

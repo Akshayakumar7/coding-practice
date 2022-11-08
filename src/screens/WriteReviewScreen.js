@@ -100,6 +100,7 @@ const style = StyleSheet.create({
     fontSize: hp(3),
     textAlign: 'center',
     padding: hp(2),
+    color:'black'
   },
   mainView: {backgroundColor: 'white', flex: 1},
   cardWidth:{width: '27%'},

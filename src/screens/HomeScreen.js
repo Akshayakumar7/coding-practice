@@ -21,7 +21,7 @@ import {
 } from '../constants/constantData';
 import CategoryCard from '../component/CategoryCard';
 import SearchBar from '../component/SearchBar';
-import {ImageSlider} from 'react-native-image-slider-banner';
+import ImageSlider from '../component/ImageSlider';
 
 const HomeScreen = () => {
   const renderShoes = item => {
@@ -54,11 +54,7 @@ const HomeScreen = () => {
       <View style={style.topView}>
         <SearchBar />
         <View style={style.imageSlider}>
-          <ImageSlider
-            data={imageUrlArray}
-            caroselImageStyle={style.imageContentView}
-            autoPlay={true}
-          />
+          <ImageSlider />
         </View>
       </View>
       <View style={style.bottomView}>
@@ -157,7 +153,7 @@ const style = StyleSheet.create({
     marginRight: hp(2),
   },
   mainView: {flex: 1, backgroundColor: '#0063C6'},
-  imageSlider: {height: hp(25), padding: hp(2)},
+  imageSlider: {height: hp(20), padding: hp(2)},
   leftMargin: {marginLeft: wp(4)},
   marginFlex: {flex: 1, marginLeft: wp(4)},
   arrowStyle: {
@@ -170,14 +166,14 @@ const style = StyleSheet.create({
     borderRadius: hp(2),
     width: wp(92.4),
   },
-  productStyle: {height:hp(17),width:wp(30)},
-  categoryProductStyle:{
-    height:'65%',
-    width:'85%'
+  productStyle: {height: hp(17), width: wp(30)},
+  categoryProductStyle: {
+    height: '65%',
+    width: '85%',
   },
-  cardStyle:{
-    width:wp(35),
-    height:hp(14)
-  }
+  cardStyle: {
+    width: wp(35),
+    height: hp(14),
+  },
 });
 export default HomeScreen;

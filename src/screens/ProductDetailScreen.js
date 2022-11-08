@@ -25,7 +25,7 @@ import {
   shoesData,
 } from '../constants/constantData';
 import ProductCard from '../component/productCard';
-import {ImageSlider} from 'react-native-image-slider-banner';
+import ImageSlider from '../component/ImageSlider';
 
 const ProducDetailScreen = ({navigation}) => {
   const onPressSeeDiscriptionButton = () => {
@@ -51,18 +51,15 @@ const ProducDetailScreen = ({navigation}) => {
   return (
     <View style={style.mainView}>
       <View style={style.imageSlider}>
-        <ImageSlider
-          data={imageUrlArray}
-          caroselImageStyle={style.imageContentView}
-          autoPlay={true}
-        />
+        <ImageSlider needHeader={true}/>
       </View>
       <View style={style.contentMainView}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <Text style={style.productText}>{PRODUCT_TEXT}</Text>
           <View style={style.smallHeight} />
+          <View style={style.smallHeight} />
           <View style={style.flexView}>
-            <RatingStarCard />
+            <RatingStarCard starImageStyle={style.starStyle} />
             <View style={style.minimumWidth} />
             <TouchableOpacity onPress={() => onPressAddReviewButton()}>
               <Text style={style.reviewText}>{SEE_REVIEW_TEXT}</Text>
@@ -72,7 +69,6 @@ const ProducDetailScreen = ({navigation}) => {
           <Text style={style.priceText}>{PRICE_TEXT}</Text>
           <View style={style.extraHeight} />
           <View style={style.smallHeight} />
-
           <TouchableOpacity onPress={() => onPressSeeDiscriptionButton()}>
             <View style={style.buttonBorderView}>
               <View style={style.alignBittonItems}>
@@ -83,18 +79,7 @@ const ProducDetailScreen = ({navigation}) => {
               </View>
             </View>
           </TouchableOpacity>
-          <View style={style.extraHeight} />
-          <View style={style.smallHeight} />
-
-          {/* <TouchableOpacity onPress={() => onPressAddReviewButton()}>
-            <View style={style.subView}>
-              <View style={style.alignBittonItems}>
-                <Text style={style.descriptionText}>{ADD_REVIEW_TEXT}</Text>
-                <Image source={ARROW_ICON} style={style.arrowIconStyle} />
-              </View>
-            </View>
-          </TouchableOpacity> */}
-          <View style={style.extraHeight} />
+          <View style={style.deviderHeight} />
           <View style={style.alignBittonItems}>
             <Text style={style.categoriesText}>{RELEATED_PRODUCT_TEXT}</Text>
             <TouchableOpacity>
@@ -141,7 +126,7 @@ const style = StyleSheet.create({
   productText: {
     fontFamily: 'Roboto',
     color: '#00000080',
-    fontSize: hp(2.4),
+    fontSize: hp(2.6),
   },
   smallHeight: {
     height: hp(0.5),
@@ -153,8 +138,8 @@ const style = StyleSheet.create({
   reviewText: {
     fontFamily: 'Roboto',
     color: '#B620E0',
-    fontSize: hp(2.2),
-    fontWeight: 'bold',
+    fontSize: hp(2.5),
+    marginTop: hp(0.5),
   },
   extraHeight: {
     height: hp(2),
@@ -184,25 +169,31 @@ const style = StyleSheet.create({
     fontFamily: 'Roboto',
     fontWeight: 'bold',
     color: '#B620E0',
-    fontSize: hp(2.3),
+    fontSize: hp(2.2),
   },
   extraMarinRight: {
     marginRight: hp(2),
   },
-  marginFlex: {flex: 1, marginLeft: wp(4)},
+  marginFlex: {
+    flex: 1,
+    marginLeft: wp(4),
+  },
   textStyle: {
-    fontSize: hp(2.2),
+    fontSize: hp(2.4),
     fontWeight: 'bold',
     color: 'black',
   },
   buyNowTextStyle: {
-    fontSize: hp(2.2),
+    fontSize: hp(2.4),
     fontWeight: 'bold',
-    margin: hp(1),
-    marginHorizontal: hp(6.5),
+    margin: hp(1.2),
+    marginHorizontal: hp(6),
     color: 'black',
   },
-  imageSlider: {height: hp(34), padding: hp(2)},
+  imageSlider: {
+    height: hp(34),
+    padding: hp(2),
+  },
   imageContentView: {
     resizeMode: 'cover',
     height: hp(30),
@@ -223,7 +214,7 @@ const style = StyleSheet.create({
     borderRadius: hp(0.5),
   },
   fotterView: {
-    flex: 0.13,
+    flex: 0.14,
     width: '80%',
     alignSelf: 'center',
     backgroundColor: 'white',
@@ -233,16 +224,40 @@ const style = StyleSheet.create({
     backgroundColor: '#B4B4B4',
     width: '100%',
   },
-  mainView: {flex: 1, backgroundColor: 'white'},
-  productCardStyle: {flex: 1, marginRight: wp(4)},
-  arrowIconStyle: {height: hp(4), width: wp(4), margin: hp(1.5)},
+  mainView: {
+    flex: 1,
+    backgroundColor: 'white',
+  },
+  productCardStyle: {
+    flex: 1,
+    marginRight: wp(4),
+  },
+  arrowIconStyle: {
+    height: hp(4),
+    width: wp(4),
+    margin: hp(1.5),
+  },
   buttonBorderView: {
     borderRadius: hp(1),
     borderWidth: hp(0.15),
     borderColor: '#DCDCDC',
   },
-  parallelWidth: {width: wp(12)},
-  minimumWidth: {width: wp(3)},
-  productCard: {height: '80%', width: '100%'},
+  parallelWidth: {
+    width: wp(12),
+  },
+  minimumWidth: {
+    width: wp(3),
+  },
+  productCard: {
+    height: '80%',
+    width: '100%',
+  },
+  deviderHeight: {
+    height: hp(5),
+  },
+  starStyle: {
+    height: hp(4),
+    width: wp(5),
+  },
 });
 export default ProducDetailScreen;

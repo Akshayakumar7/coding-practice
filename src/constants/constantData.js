@@ -6,6 +6,12 @@ import PROFILE1 from '../../asset/images/profile1.png';
 import PROFILE2 from '../../asset/images/profile2.png';
 import PROFILE3 from '../../asset/images/profile3.png';
 import PROFILE4 from '../../asset/images/profile4.png';
+// import NEWREDSHOE from '../../asset/images/newred.png';
+// import NIKEAIR1 from '../../asset/images/nikeair1.png';
+// import NIKEAIR2 from '../../asset/images/nikeaie2.png';
+// import NIKEAIR3 from '../../asset/images/nikeaie3.jpeg';
+// import NIKEAIR4 from '../../asset/images/nikeair4.png';
+// import NIKEAIR5 from '../../asset/images/nikeair5.png';
 
 const data = [
   {
@@ -50,9 +56,9 @@ const imageUrlArray = [
   {
     img: 'https://thumbs.dreamstime.com/b/adidas-soccer-shoes-18365183.jpg',
   },
-  {
-    img:'https://sm.askmen.com/askmen_in/photo/default/expensive-shoes-horizontal-inpost-3_dwaf.jpg'
-  }
+  // {
+  //   img: 'https://sm.askmen.com/askmen_in/photo/default/expensive-shoes-horizontal-inpost-3_dwaf.jpg',
+  // },
 ];
 
 const categoryData = [
@@ -68,7 +74,29 @@ const categoryData = [
   {
     categoryItem: SHOE2,
   },
+  {
+    categoryItem: SHOE,
+  },
+  {
+    categoryItem: TSHIRT,
+  },
+  {
+    categoryItem: PANT,
+  },
+  {
+    categoryItem: SHOE2,
+  },
 ];
+
+// const NEWSHOES = [
+//   // {categoryItem: NEWREDSHOE},
+//   {categoryItem: NIKEAIR1},
+//   {categoryItem: NIKEAIR3},
+//   {categoryItem: NEWREDSHOE},
+//   {categoryItem: NIKEAIR2},
+//   {categoryItem: NIKEAIR4},
+//   {categoryItem: NIKEAIR1},
+// ];
 
 const shoesData = [
   {
@@ -165,7 +193,6 @@ const AllReviewData = [
     profilePic: PROFILE4,
     review: 'Its good service from, the packing nice and delivery on time … ',
   },
-  
 ];
 
 const CATEGORIES_TEXT = 'CATEGORIES';
@@ -182,7 +209,7 @@ const ALL_REVIEW_TEXT = 'All Review';
 const SUGGESTION_TEXT = 'What can we improve ? ';
 const RATING_TEXT = 'Whats your rate ?';
 const SEE_REVIEW_TEXT = 'SEE REVIEW';
-const PRODUCT_TEXT = 'Maya Flopicool (Special Limited Edition)';
+const PRODUCT_TEXT = 'ULTRABOOST 20 SHOES NMD_R1 ';
 const PRICE_TEXT = '$130';
 const SEE_DESCRIPTION_TEXT = 'See Description';
 const ADD_TO_CART_TEXT = 'ADD TO CART';
@@ -192,10 +219,6 @@ const RELEATED_PRODUCT_TEXT = 'RELEATED PRODUCT';
 const SHOES_TEXT = 'ULTRABOOST 20 SHOES NMD_R1 ';
 const FILTER_TEXT = 'Filter';
 const DESCRIPTION_TEXT = 'Description';
-
-
-
-
 
 export {
   data,
@@ -227,5 +250,5 @@ export {
   RELEATED_PRODUCT_TEXT,
   SHOES_TEXT,
   FILTER_TEXT,
-  DESCRIPTION_TEXT
+  DESCRIPTION_TEXT,
 };
