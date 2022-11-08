@@ -404,7 +404,7 @@ const style = StyleSheet.create({
     backgroundColor: '#ECEEF0',
   },
   flatListBottomMargin: {
-    marginBottom: hp(36),
+    marginBottom: hp(40),
   },
   paddingMargin: {
     padding: hp(10),

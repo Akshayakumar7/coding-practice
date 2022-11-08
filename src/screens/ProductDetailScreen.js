@@ -214,7 +214,7 @@ const style = StyleSheet.create({
     borderRadius: hp(0.5),
   },
   fotterView: {
-    flex: 0.14,
+    flex: 0.13,
     width: '80%',
     alignSelf: 'center',
     backgroundColor: 'white',
