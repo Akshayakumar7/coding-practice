@@ -1,6 +1,5 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
-import PROFILE from '../../asset/images/profile1.png';
 import {hp, wp} from '../methods/commonMethods';
 import RatingStarCard from './RatingStarCard';
 
@@ -21,7 +20,6 @@ const ReviewCard = props => {
           </View>
         </View>
       </View>
-      <View></View>
     </View>
   );
 };
@@ -34,13 +32,13 @@ const style = StyleSheet.create({
     borderRadius: hp(2),
   },
   flexView: {
-  flexDirection: 'row'
+    flexDirection: 'row',
   },
   reviewTextStyle: {
     fontSize: hp(2.2),
     width: '90%',
     lineHeight: hp(4),
-    color:'#00000080'
+    color: '#00000080',
   },
   subView: {flex: 2, flexWrap: 'wrap'},
   minimumWidth: {width: wp(1)},

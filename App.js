@@ -28,7 +28,7 @@ const App = () => {
       }}>
         <Tab.Screen
           name="Home"
-          component={HomeScreenNavigator} // Replaced Screen 1
+          component={HomeScreenNavigator} 
           options={{tabBarIcon:({focused})=>{
             return(
               <Image source={HOME_ICON} style={{height:hp(4),width:wp(6.3),tintColor:focused ? '#0d0d0c':'#D8D8D8'}}/>
@@ -37,7 +37,7 @@ const App = () => {
         />
         <Tab.Screen
           name="Product"
-          component={ProductScreenNavigator} // Replaced Screen 2
+          component={ProductScreenNavigator} 
           options={{tabBarIcon:({focused})=>{
             return(
               <Image source={PRODUCT_ICON} style={{height:hp(4),width:wp(8),tintColor:focused ? '#0d0d0c':'#D8D8D8'}}/>
@@ -46,7 +46,7 @@ const App = () => {
         />
         <Tab.Screen
           name="Order"
-          component={OrderScreen} // Replaced Screen 2
+          component={OrderScreen} 
           options={{tabBarIcon:({focused})=>{
             return(
               <Image source={ORDER_ICON} style={{height:hp(4),width:wp(7),tintColor:focused ? '#0d0d0c':'#D8D8D8'}}/>
@@ -55,7 +55,7 @@ const App = () => {
         />
          <Tab.Screen
           name="Account"
-          component={AccountScreen} // Replaced Screen 2
+          component={AccountScreen}
           options={{tabBarIcon:({focused})=>{
             return(
               <Image source={ACCOUNT_ICON} style={{height:hp(3.5),width:wp(6.5),tintColor:focused ? '#0d0d0c':'#D8D8D8'}}/>

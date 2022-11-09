@@ -35,7 +35,11 @@ const style = StyleSheet.create({
     width: wp(17),
     height: hp(5.2),
   },
-  starImageSTyle: {height: hp(3), width: wp(4), marginRight: wp(2)},
+  starImageSTyle: {
+    height: hp(3),
+    width: wp(4),
+    marginRight: wp(2),
+  },
   textStyle: {
     textAlign: 'center',
     fontWeight: 'bold',

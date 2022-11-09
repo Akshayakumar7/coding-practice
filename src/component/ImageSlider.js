@@ -12,7 +12,7 @@ import {hp, wp} from '../methods/commonMethods';
 import LIKED_ICON from '../../asset/images/liked.png';
 import SHARE_ICON from '../../asset/images/share.png';
 import BACK_HANDLER from '../../asset/images/arrow-left.png';
-const {width, height} = Dimensions.get('screen');
+const {width} = Dimensions.get('screen');
 
 const ImageSlider = props => {
   const {needHeader,customStyle} = props;
@@ -71,7 +71,7 @@ const ImageSlider = props => {
         data={shoesData}
         renderItem={({item}) => renderProducts(item)}
         horizontal={true}
-        keyExtractor={(item, index) => index.toString()}
+        keyExtractor={(index) => index.toString()}
         showsHorizontalScrollIndicator={false}
         scrollEventThrottle={32}
         onScroll={Animated.event(

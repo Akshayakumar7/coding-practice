@@ -1,9 +1,7 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image, SafeAreaView} from 'react-native';
+import {StyleSheet, View, Image, } from 'react-native';
 import {hp, wp} from '../methods/commonMethods';
-import SHOE1 from '../../asset/images/running-shoes.png';
-// import SHOE1 from '../../src/constants/imagePath';
-import SHOE from '../../asset/images/shoe1.png'
+
 
 const CategoryCard = props => {
   const {image, productStyle,customCardStyle} = props;
@@ -27,7 +25,6 @@ const style = StyleSheet.create({
     borderRadius: hp(2.5),
     alignItems: 'center',
     justifyContent: 'center',
-    // alignContent:'center'
   },
   imageStyle: {
     width: '70%',

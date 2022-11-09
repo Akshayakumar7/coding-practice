@@ -9,24 +9,31 @@ import RatingStarCard from './RatingStarCard';
 import SHOE from '../../asset/images/shoe1.png';
 
 const ProductDetailCard = props => {
-  const {image, productName, priceText,cardStyle,productStyle,startImageStyle} = props;
+  const {
+    image,
+    productName,
+    priceText,
+    cardStyle,
+    productStyle,
+    startImageStyle,
+  } = props;
   return (
     <View>
       <View style={style.flexView}>
         <View style={style.cardWidth}>
-          <CategoryCard image={image} productStyle={productStyle} customCardStyle={cardStyle} />
+          <CategoryCard
+            image={image}
+            productStyle={productStyle}
+            customCardStyle={cardStyle}
+          />
         </View>
-        {/* <View style={{width:wp(3)}}/> */}
-    
         <View style={style.productTextWidth}>
           <Text style={style.productTextSTyle}>{productName}</Text>
           <View style={style.extraHeight} />
-         
           <Text style={style.priceText}>{priceText}</Text>
           <View style={style.extraHeight} />
           <View style={style.smallDivider} />
-          <RatingStarCard startImageStyle={startImageStyle}/>
-          
+          <RatingStarCard startImageStyle={startImageStyle} />
         </View>
       </View>
     </View>
@@ -42,7 +49,7 @@ const style = StyleSheet.create({
     height: '70%',
   },
   flexView: {
-    width:'100%',
+    width: '100%',
     // height:'100%',
     flexDirection: 'row',
     alignItems: 'center',
@@ -66,10 +73,10 @@ const style = StyleSheet.create({
     width: '50%',
     height: '10%',
   },
-  extraHeight:{
-    height:hp(2)
+  extraHeight: {
+    height: hp(2),
   },
-  cardWidth:{width:'35%'},
-  productTextWidth:{height:'100%',width:'35%'}
+  cardWidth: {width: '35%'},
+  productTextWidth: {height: '100%', width: '35%'},
 });
 export default ProductDetailCard;

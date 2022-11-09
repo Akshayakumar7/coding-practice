@@ -1,8 +1,5 @@
 import React from 'react';
-import { Button, Text, View } from 'react-native';
-import navigationStrings from '../constants/navigationStrings';
-import { implementNavidation } from '../methods/commonMethods';
-
+import {  Text, View } from 'react-native';
 const AccountScreen = () => {
   return (
     <View

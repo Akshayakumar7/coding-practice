@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, TextInput, View, Image} from 'react-native';
+import {StyleSheet, TextInput, View, Image} from 'react-native';
 import {hp, wp} from '../methods/commonMethods';
 import WHITE_SEARCH_ICON from '../../asset/images/search.png';
 import WHITE_CART_ICON from '../../asset/images/cart-icon.png';
@@ -17,7 +17,7 @@ const SearchBar = props => {
       <View style={style.flexView}>
         <View style={[style.searchBarBorder, customStyle]}>
           <View style={style.flexView}>
-            <View style={{margin: hp(1), marginLeft: wp(4)}}>
+            <View style={style.searchBarView}>
               {needBrownSearchBar ? (
                 <View>
                   <Image
@@ -79,7 +79,17 @@ const style = StyleSheet.create({
     height: hp(6),
     width: wp(8),
   },
-  mainView: {paddingHorizontal: hp(2.2)},
-  cardView:{margin: hp(1), marginTop: hp(2.5), marginLeft: wp(3)}
+  mainView: {
+    paddingHorizontal: hp(2.2),
+  },
+  cardView: {
+    margin: hp(1),
+    marginTop: hp(2.5),
+    marginLeft: wp(3),
+  },
+  searchBarView: {
+    margin: hp(1),
+    marginLeft: wp(4),
+  },
 });
 export default SearchBar;

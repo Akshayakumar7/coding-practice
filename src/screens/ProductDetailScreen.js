@@ -12,10 +12,8 @@ import RatingStarCard from '../component/RatingStarCard';
 import {hp, wp} from '../methods/commonMethods';
 import ARROW_ICON from '../../asset/images/rightarrow.png';
 import {
-  ADD_REVIEW_TEXT,
   ADD_TO_CART_TEXT,
   BUY_NOW_TEXT,
-  imageUrlArray,
   PRICE_TEXT,
   PRODUCT_TEXT,
   RELEATED_PRODUCT_TEXT,

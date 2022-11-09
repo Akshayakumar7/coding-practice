@@ -43,10 +43,7 @@ const WriteReviewScreen = () => {
         <View style={style.reviewBorder}>
           <TextInput placeholder="Good quality & very original product" />
         </View>
-        <View style={style.extraHeight} />
-        <View style={style.extraHeight} />
-        <View style={style.extraHeight} />
-        <View style={style.extraHeight} />
+        <View style={style.wideHeight} />
         <TouchableOpacity style={style.buttonBorder}>
           <Text style={style.submitTextStyle}>{SMALL_LETTER_SUBMIT_TEXT}</Text>
         </TouchableOpacity>
@@ -105,6 +102,9 @@ const style = StyleSheet.create({
   mainView: {backgroundColor: 'white', flex: 1},
   cardWidth:{width: '27%'},
   productTextWidth:{width: '75%'},
-  ratingStyle:{height: hp(6), width: wp(8)}
+  ratingStyle:{height: hp(6), width: wp(8)},
+  wideHeight:{
+    height:hp(8)
+  }
 });
 export default WriteReviewScreen;

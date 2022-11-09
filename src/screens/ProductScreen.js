@@ -14,7 +14,6 @@ import FILTER_ICON from '../../asset/images/filter.png';
 import GROUP_ICON from '../../asset/images/group2.png';
 import {
   CHOOSE_COLOR_TEXT,
-  DISCOUNT_TEXT,
   FREE_DELIVERY_TEXT,
   NEW_PRODUCT_TEXT,
   shoesData,
@@ -57,7 +56,6 @@ const ProductScreen = ({navigation}) => {
   };
 
   const onPressFilterIcon = () => {
-    console.log('Modal state changed');
     setModalVisible(!modalVisible);
   };
 
@@ -246,9 +244,7 @@ const ProductScreen = ({navigation}) => {
                   <Image source={GREEN_ICON} style={style.commonMarginRight} />
                   <Image source={YELLOW_ICON} style={style.commonMarginRight} />
                 </View>
-                <View style={style.minimumHeight} />
-                <View style={style.minimumHeight} />
-                <View style={style.minimumHeight} />
+                <View style={style.extraHeight} />
                 <TouchableOpacity style={style.buttonBorder}>
                   <Text style={style.submitTextStyle}>
                     {SMALL_LETTER_SUBMIT_TEXT}
@@ -321,11 +317,9 @@ const style = StyleSheet.create({
     marginTop: hp(38),
   },
   modalView: {
-    // margin: hp(20),
     backgroundColor: 'white',
     borderRadius: hp(5),
     padding: hp(5),
-    // alignItems: "center",
     width: '100%',
     alignSelf: 'center',
   },
@@ -430,6 +424,9 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+  },
+  extraHeight: {
+    height: hp(6),
   },
 });
 export default ProductScreen;

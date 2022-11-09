@@ -12,7 +12,6 @@ import ProductCard from '../component/productCard';
 import {
   CATEGORIES_TEXT,
   categoryData,
-  data,
   DISCOUNT_TEXT,
   NEW_PRODUCT_TEXT,
   SELECT_ALL_TEXT,
@@ -91,7 +90,6 @@ const HomeScreen = () => {
             />
           </View>
           <View style={style.divideHeight} />
-          {/* <View style={style.divideHeight} /> */}
           <View style={style.flexView}>
             <Text style={style.categoriesText}>{DISCOUNT_TEXT}</Text>
             <TouchableOpacity>

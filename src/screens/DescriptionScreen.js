@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
-import {hp, wp} from '../methods/commonMethods';
+import {hp} from '../methods/commonMethods';
 import BACK_HANDLET from '../../asset/images/arrow-left.png';
 import {DESCRIPTION_TEXT} from '../constants/constantData';
 
@@ -41,7 +41,6 @@ const style = StyleSheet.create({
   },
   arrowStyle: {
     margin: hp(2),
-    // marginLeft: wp(4),
     marginTop: hp(2.6),
   },
   textStyle: {

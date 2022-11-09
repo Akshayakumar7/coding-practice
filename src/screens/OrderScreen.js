@@ -1,9 +1,5 @@
 import React from 'react';
-import {Button, Text, View} from 'react-native';
-import ProductDetailCard from '../component/ProductDetailCard';
-import navigationStrings from '../constants/navigationStrings';
-import {implementNavidation} from '../methods/commonMethods';
-import SHOE from '../../asset/images/shoe1.png';
+import { Text, View} from 'react-native';
 
 const OrderScreen = () => {
   return (
