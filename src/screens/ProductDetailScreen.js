@@ -49,7 +49,7 @@ const ProducDetailScreen = ({navigation}) => {
   return (
     <View style={style.mainView}>
       <View style={style.imageSlider}>
-        <ImageSlider needHeader={true}/>
+        <ImageSlider needHeader={true} />
       </View>
       <View style={style.contentMainView}>
         <ScrollView showsVerticalScrollIndicator={false}>
@@ -107,6 +107,7 @@ const ProducDetailScreen = ({navigation}) => {
           <TouchableOpacity>
             <View style={style.textView}>
               <Text style={style.buyNowTextStyle}>{BUY_NOW_TEXT}</Text>
+              <View style={style.minimalHeight} />
             </View>
           </TouchableOpacity>
         </View>
@@ -257,5 +258,6 @@ const style = StyleSheet.create({
     height: hp(4),
     width: wp(5),
   },
+  minimalHeight: {height: hp(0.4)},
 });
 export default ProducDetailScreen;
